@@ -130,10 +130,13 @@ export default function CarList() {
       price: carPrice,
     };
 
-    if (isUpdate) {
+     if (isUpdate) {
       await CarService.updateCar(carIdSelected, payload);
     } else {
-      await CarService.addCar(payload);
+      await CarService.addCar({
+        ...payload,
+        createdAt: new Date().toISOString(),
+      });
     }
 
     resetForm();
