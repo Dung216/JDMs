@@ -15,7 +15,7 @@ export default function SignupPage() {
 
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     try {
-      const res = await fetch("https://your-api.com/signup", {
+      const res = await fetch("https://api.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export default function SignupPage() {
               </Button>
 
               <Button
-                onClick={() => router.push("/forgot-password")}
+                onClick={() => router.push("/forgotpassword")}
                 className="flex-1 !bg-blue-500 hover:!bg-blue-600 !text-white"
               >
                 Quên mật khẩu

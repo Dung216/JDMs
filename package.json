@@ -15,7 +15,8 @@
     "next-video": "^2.7.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "save": "^2.9.0"
+    "save": "^2.9.0",
+    "swiper": "^12.1.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
