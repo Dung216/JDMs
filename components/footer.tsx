@@ -45,7 +45,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="hover:text-gray-500 transition-colors cursor-default">
-              Bien Hoa, Dong Nai, VietNam
+              Tran Bien, Dong Nai, VietNam
             </li>
           </ul>
         </div>
@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-[#ffffff]/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-[#ffffff]/5 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex gap-6 text-[10px] text-black uppercase tracking-widest font-bold">
            <span>Terms of Service</span>
            <span>Privacy Policy</span>
