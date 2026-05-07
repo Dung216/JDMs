@@ -26,7 +26,7 @@ export default function NissanR33Page() {
       {/* IMAGE */}
       <div className="mb-16 overflow-hidden rounded-[30px] border border-white/10">
         <img
-          src="/r33.jpg"
+          src="/e33.jpg"
           alt="Nissan R33 GT-R"
           className="
             w-full
