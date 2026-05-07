@@ -16,35 +16,30 @@ const cars = [
     title: "TOYOTA SUPRA MK4",
     image: "/MK4.png",
     audio: "/mk4.mp4",
-    price: "150.000 USD",
-  },
+    },
   {
     id: 3,
     title: "NISSAN GT-R R33",
     image: "/e33.jpg",
     audio: "/r33.mp4",
-    price: "150.000 USD",
   },
   {
     id: 4,
     title: "NISSAN GT-R R34",
     image: "/R34.png",
     audio: "/r34.mp4",
-    price: "150.000 USD",
-  },
+    },
   {
     id: 5,
     title: "NISSAN GT-R R35",
     image: "/r35.jpg",
     audio: "/gtr r35.mp4",
-    price: "150.000 USD",
   },
   {
     id: 6,
     title: "SUBARU IMPREZA WRX STI",
     image: "/STI.jpg",
     audio: "/subaruSTI.mp4",
-    price: "150.000 USD",
   },
 ];
 
@@ -131,10 +126,6 @@ export default function CarUI() {
               >
                 {car.title}
               </h2>
-
-              <p className="mt-4 text-3xl font-black text-white">
-                {car.price}
-              </p>
 
               
             </div>
