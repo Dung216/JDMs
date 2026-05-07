@@ -24,14 +24,14 @@ export default function Footer() {
 
         {/* Cột 2 */}
         <div className="space-y-4">
-          <h3 className="font-bold text-lg uppercase tracking-wide text-[#F12B3F]">
+          <h3 className="font-bold text-lg uppercase tracking-wide text-[#000000]">
             contact
           </h3>
           <ul className="space-y-2 text-sm text-black">
             <li>
               <a 
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=dang216dang@gmail.com"
-                className="hover:text-[#df2531] transition-colors flex items-center gap-2"
+                className="hover:text-[#24cfff] transition-colors flex items-center gap-2"
               >
                 <MailOutlined className="text-xs" /> H.Dũng
               </a>
@@ -39,7 +39,7 @@ export default function Footer() {
             <li>
               <a 
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=phambac8526@gmail.com"
-                className="hover:text-[#df2531] transition-colors flex items-center gap-2"
+                className="hover:text-[#24cfff] transition-colors flex items-center gap-2"
               >
                 <MailOutlined className="text-xs" /> X.Bắc
               </a>
@@ -52,7 +52,7 @@ export default function Footer() {
 
         {/* Cột 3 */}
         <div className="space-y-4">
-          <h3 className="font-bold text-lg uppercase tracking-wide text-[#F12B3F]">About us</h3>
+          <h3 className="font-bold text-lg uppercase tracking-wide text-[#000000]">About us</h3>
 
           <div className="flex gap-6 text-2xl">
 

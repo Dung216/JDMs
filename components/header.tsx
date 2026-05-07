@@ -12,7 +12,7 @@ export default function Navbar() {
         const isActive = pathname === href;
         return `px-4 py-1.5 text-[13px] font-bold uppercase transition-all duration-200 ${
             isActive 
-            ? "bg-[#df2531] text-white rounded-sm" 
+            ? "bg-[#000000] text-white rounded-sm" 
             : "text-black hover:text-[#df2531]"
         }`;
     };
@@ -35,13 +35,7 @@ export default function Navbar() {
                     <Link href='/engine' className={getLinkStyle('/engine')}>Engine</Link>
                     <Link href='/sound' className={getLinkStyle('/sound')}>Sound</Link>
                     <Link href='/contact' className={getLinkStyle('/contact')}>Contact</Link>
-                    <Link
-                        href="/login"
-                        className="bg-[#df2531] text-[#ffffff] px-6 py-2 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-[#df2531] transition-all duration-300 shadow-lg active:scale-95"
-                    >
-                        Login
-                    </Link>
-
+                    
                     {/* Mobile Button */}
                     <button
                         className="md:hidden text-2xl text-white"
@@ -60,7 +54,6 @@ export default function Navbar() {
                     <Link href="/engine" onClick={() => setOpen(false)} className="px-4 py-3 text-sm font-bold uppercase text-white hover:text-[#df2531]">Engine</Link>
                     <Link href="/sound" onClick={() => setOpen(false)} className="px-4 py-3 text-sm font-bold uppercase text-white hover:text-[#df2531]">Sound</Link>
                     <Link href="/contact" onClick={() => setOpen(false)} className="px-4 py-3 text-sm font-bold uppercase text-white hover:text-[#df2531]">Contact</Link>
-                    <Link href="/login" onClick={() => setOpen(false)} className="px-4 py-3 text-sm font-bold uppercase text-white hover:text-[#df2531]">Login</Link>
                 </div>
             )}
         </nav>
