@@ -8,7 +8,7 @@ const cars = [
     id: 1,
     title: "MAZDA RX 7 GEN 1",
     image: "/rx7.jpg",
-    audio: "/rx7.mp4",
+    audio: "/brapp rx7.mp4",
     price: "150.000 USD",
   },
   {
@@ -42,7 +42,7 @@ const cars = [
   {
     id: 6,
     title: "SUBARU IMPREZA WRX STI",
-    image: "/sti.jpg",
+    image: "/STI.jpg",
     audio: "/subaruSTI.mp4",
     price: "150.000 USD",
   },
