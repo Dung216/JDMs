@@ -1,3 +1,4 @@
+import { MailOutlined } from "@ant-design/icons";
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white/20 flex items-center justify-center px-6">
@@ -38,7 +39,7 @@ export default function ContactPage() {
             </h2>
 
             <p className="text-gray-300">
-              Đại học Lạc Hồng, Biên Hòa, Đồng Nai.
+              Đại học Lạc Hồng, Trấn Biên, Đồng Nai.
             </p>
           </div>
 
@@ -51,10 +52,18 @@ export default function ContactPage() {
             <p>
               <span className="font-bold text-white">Email:</span>{" "}
               phambac8526@gmail.com
+              <li>
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=phambac8526@gmail.com"
+                className="hover:text-[#24cfff] transition-colors flex items-center gap-2"
+              >
+                <MailOutlined className="text-xs" /> X.Bắc
+              </a>
+            </li>
             </p>
 
             <p>
-              <span className="font-bold text-white">Phone:</span>{" "}
+              <span className="font-bold text-white">Phone/Zalo:</span>{" "}
               0902073457
             </p>
           </div>
@@ -68,10 +77,18 @@ export default function ContactPage() {
             <p>
               <span className="font-bold text-white">Email:</span>{" "}
               dung216dang@gmail.com
+              <li>
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=dang216dang@gmail.com"
+                className="hover:text-[#24cfff] transition-colors flex items-center gap-2"
+              >
+                <MailOutlined className="text-xs" /> H.Dũng
+              </a>
+            </li>
             </p>
 
             <p>
-              <span className="font-bold text-white">Phone:</span>{" "}
+              <span className="font-bold text-white">Phone/Zalo:</span>{" "}
               0814129540
             </p>
           </div>
