@@ -1,104 +1,59 @@
 "use client";
 
-import React from "react";
-import { useRouter } from "next/navigation";
-import type { FormProps } from "antd";
-import { Button, Form, Input } from "antd";
+import React, { useRef, useState } from "react"; // Thêm useRef và useState
 
-type FieldType = {
-  email?: string;
-  password?: string;
-};
+// Import Swiper React components và styles
 
-export default function SignupPage() {
-  const router = useRouter();
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-  const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
-    try {
-      const res = await fetch("https://api.com/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+export default function HomePage() {
+  // 1. Khởi tạo Ref để điều khiển video và State để track trạng thái
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-      const data = await res.json();
-
-      if (res.ok) {
-        alert("Signup success");
-        router.push("/login");
+  // 2. Hàm xử lý Bật/Tắt video
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
       } else {
-        alert(data.message);
+        videoRef.current.play();
       }
-    } catch (err) {
-      console.error(err);
+      setIsPlaying(!isPlaying);
     }
   };
 
+
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-blue-200">
-      <div className="bg-red-100 p-10 rounded-xl shadow-md w-[400px] text-black">
-        <h2 className="text-2xl font-bold text-center mb-6">
-          Sign Up
-        </h2>
+    <main className="relative min-h-screen w-full overflow-x-hidden bg-[#000000] text-white">
+      {/* -------------------- SECTION 1: HERO -------------------- */}
+      <div className="relative min-h-screen w-full overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video
+            src="/bg.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/45 z-10"></div>
+        </div>
 
-        <Form
-          name="signup"
-          labelCol={{ span: 8 }}
-          wrapperCol={{ span: 16 }}
-          onFinish={onFinish}
-          autoComplete="off"
-        >
-          <Form.Item<FieldType>
-            label="Email"
-            name="email"
-            rules={[
-              { required: true, message: "Please input your email!" },
-              { type: "email", message: "Email không hợp lệ!" },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Form.Item<FieldType>
-            label="Password"
-            name="password"
-            rules={[
-              { required: true, message: "Please input your password!" },
-              { min: 6, message: "Ít nhất 6 ký tự!" },
-            ]}
-          >
-            <Input.Password />
-          </Form.Item>
-
-          {/* Submit */}
-          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit">
-              Sign Up
-            </Button>
-          </Form.Item>
-
-          {/* 2 nút dưới */}
-          <Form.Item wrapperCol={{ span: 24 }}>
-            <div className="flex gap-4 mt-2">
-              <Button
-                onClick={() => router.push("/login")}
-                className="flex-1 !bg-gray-200 hover:!bg-gray-300 !text-black !border !border-black"
-              >
-                Quay lại đăng nhập
-              </Button>
-
-              <Button
-                onClick={() => router.push("/forgotpassword")}
-                className="flex-1 !bg-blue-500 hover:!bg-blue-600 !text-white"
-              >
-                Quên mật khẩu
-              </Button>
-            </div>
-          </Form.Item>
-        </Form>
+        <div className="relative z-20 flex flex-col items-start justify-center min-h-screen px-10 md:px-20 lg:px-32">
+          {/* Thêm pr-10 để tạo không gian cho độ nghiêng của chữ 'e', và w-fit để container không bó hẹp chữ */}
+          <h1 className="text-6xl md:text-7xl font-black uppercase italic tracking-tighter title-scan-effect drop-shadow-[0_5px_15px_rgba(223,37,49,0.3)] pr-10 w-fit overflow-visible">
+            JDM
+          </h1>
+          <p className="mt-4 text-gray-200 max-w-xl text-lg md:text-xl font-bold tracking-widest uppercase text-left">
+            For a future where we no longer have to lose everything just to understand each other.
+          </p>
+        </div>
       </div>
-    </div>
+
+      
+    </main>
   );
 }
